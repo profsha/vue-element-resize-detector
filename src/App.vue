@@ -17,40 +17,41 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import { resize } from "./index";
-export default {
+export default defineComponent({
   name: "app",
   directives: {
-    rlocal: resize
+    rlocal: resize,
   },
   data() {
     return {
       width: 0,
       width2: 0,
       width3: 0,
-      width4: 0
+      width4: 0,
     };
   },
   methods: {
-    onResize(e) {
+    onResize(e: { detail: { width: number } }) {
       console.log("resize event", e.detail.width);
       this.width = e.detail.width;
     },
-    onResize2(e) {
+    onResize2(e: { detail: { width: number } }) {
       console.log("resize event", e.detail.width);
       this.width2 = e.detail.width;
     },
-    onResize3(e) {
+    onResize3(e: { detail: { width: number } }) {
       console.log("resize event", e.detail.width);
       this.width3 = e.detail.width;
     },
-    onResize4(e) {
+    onResize4(e: { detail: { width: number } }) {
       console.log("resize event", e.detail.width);
       this.width4 = e.detail.width;
-    }
-  }
-};
+    },
+  },
+});
 </script>
 
 <style>

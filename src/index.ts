@@ -1,9 +1,9 @@
 import resize from "./directive/elementResizeDetector";
 
 export default {
-  install(Vue) {
-    Vue.directive("resize", resize);
-  }
+  install(app: any, options: any) {
+    app.directive("resize", resize);
+  },
 };
 
 export { resize };
