@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "build:lib": "rimraf dist && vue-cli-service build --target lib ./src/index.js",
+    "build:lib": "rimraf dist && vue-cli-service build --target lib ./src/index.ts",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs"
   },

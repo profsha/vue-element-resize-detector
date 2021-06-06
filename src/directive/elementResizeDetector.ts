@@ -5,7 +5,6 @@ var erd = elementResizeDetectorMaker({
 
 // this occurs once when the directive is attached to the element.
 function mounted(el: any, binding: any, vnode: any) {
-  console.log(el, binding, vnode)
   let options = {};
   if (binding.value) {
     options = binding.value;
